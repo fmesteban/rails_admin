@@ -223,9 +223,9 @@ module RailsAdmin
           return if @value.blank?
           @value = begin
             case @operator
-            when 'default', 'like'
+            when 'like'
               "%#{@value.downcase}%"
-            when 'starts_with'
+            when 'default', 'starts_with'
               "#{@value.downcase}%"
             when 'ends_with'
               "%#{@value.downcase}"
